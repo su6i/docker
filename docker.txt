@@ -1,22 +1,26 @@
-docker: Show all possible commands
-docker version: Show docker version
+ddocker :Show all possible commands
+docker version :Show docker version
 docker info:
-docker ps: Show running container
-docker container ls: Show running container
-docker images: Show all images on our machine
-docker image rm ID: Remove an image from our system
-docker pull SOMETHING: Create SOMETHING on your PC
-docker container ls -a: Show all container on our system
-docker container rm ID: Remove a container from our PC
-docker container run -it -p 80:80 nginx: Download and run nginx on port 80
-docker container run -d -p 8080:80 --name myNginx nginx: Run nginx on port 8080
-docker container run -d -p 8081:80 --name myApache httpd: Run nginx on port 8081, -d means detached
-docker container run -d -p 3306:3306 --name MySQL --env MYSQL_RPPT_PASSWORD=12345 mysql: Run mysql on port 3306 --env means environmental variable
-docker container stop mysql(or ID): Stop a docker
-docker container rm mysql -f: Force to remove a docker
-docker container exec -it myNginx bash: Run bash command into the container
-docker login: Authenticate you into the docker website
-docker push FILENAME: Push a file into dockerhub website
-docker rm $(docker ps -aq) -f: Remove all containers in the system
+docker ps :Show running container
+docker container ls :Show running container
+docker images :Show all images on our machine
+docker image rm ID :Remove an image from our system
+docker pull SOMETHING :Create SOMETHING on your PC
+docker container ls -a :Show all container on our system
+docker container rm ID :Remove a container from our PC
+docker container run -it -p 80:80 nginx :Download and run nginx on port 80
+docker container run -d -p 8080:80 --name myNginx nginx :Run nginx on port 8080
+docker container run -d -p 8081:80 --name myApache httpd :Run nginx on port 8081, -d means detached
+docker container run -d -p 3306:3306 --name MySQL --env MYSQL_RPPT_PASSWORD=12345 mysql :Run mysql on port 3306 --env means environmental variable
+docker container stop mysql(or ID) :Stop a docker
+docker container rm mysql -f :Force to remove a docker
+docker container exec -it myNginx bash :Run bash command into the container
+docker login :Authenticate you into the docker website
+docker push FILENAME :Push a file into dockerhub website
+docker rm $(docker ps -aq) -f :Remove all containers in the system
 docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name amir_nginx nginx  -v means bind mount
-docker image build -t emasalari/amir_nginx . : Build a new docker based on the files in the . (current directory)
+docker image build -t emasalari/amir_nginx . :Build a new docker based on the files in the . (current directory)
+docker run -v /opt/datadir:/var/lib/mysql mysql :Map a directory outside docker container to a directory inside docker container.
+docker inspect container_name : Full detail information about a container.
+docker logs container_name :See the logs of a container that runs in the background
+docker run -e APP_COLOR=blue container_name :-e put an environment variable into container.
