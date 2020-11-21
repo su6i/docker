@@ -24,3 +24,7 @@ docker run -v /opt/datadir:/var/lib/mysql mysql :Map a directory outside docker 
 docker inspect container_name : Full detail information about a container.
 docker logs container_name :See the logs of a container that runs in the background
 docker run -e APP_COLOR=blue container_name :-e put an environment variable into container.
+docker exec -itu root {containerName} passwd : To create/change a root password in a running container
+docker exec -u 0 -it containername bash : To run a container with "root" user
+docker exec -u root -it --workdir / <containerName> bash : To run a container with "root" user
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] : To commit changes to an existing image
