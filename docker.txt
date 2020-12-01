@@ -28,3 +28,4 @@ docker exec -itu root {containerName} passwd : To create/change a root password 
 docker exec -u 0 -it containername bash : To run a container with "root" user
 docker exec -u root -it --workdir / <containerName> bash : To run a container with "root" user
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] : To commit changes to an existing image
+docker port container_name: It shows all container's used ports 
