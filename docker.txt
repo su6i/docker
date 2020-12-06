@@ -29,3 +29,5 @@ docker exec -u 0 -it containername bash : To run a container with "root" user
 docker exec -u root -it --workdir / <containerName> bash : To run a container with "root" user
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] : To commit changes to an existing image
 docker port container_name: It shows all container's used ports 
+docker inspect emasalari/symfony-apache2 | grep volume -i -C 4 : looking for the "volume" word inside a docker config file and display 4 line around the word
+
